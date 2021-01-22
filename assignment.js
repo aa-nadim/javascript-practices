@@ -1,3 +1,4 @@
+//https://github.com/aa-nadim/javascript_tutorial
 
 function kilometerToMeter(kilometer){
     if(kilometer<0){
@@ -57,15 +58,15 @@ function megaFriend(friends){
 }
 
 
-var meter = kilometerToMeter(8);
-console.log(meter);
+// var meter = kilometerToMeter(8);
+// console.log(meter);
 
-var totalBudget = budgetCalculator(4,3,1);
-console.log(totalBudget);
+// var totalBudget = budgetCalculator(4,3,1);
+// console.log(totalBudget);
 
-var totalCost = hotelCost(8.9);
-console.log(totalCost);
+// var totalCost = hotelCost(8.9);
+// console.log(totalCost);
 
-var friends = ["nadim","raj","dorjoy","akib","sakib"];
-var bigFriend = megaFriend(friends);
-console.log(bigFriend);
+// var friends = ["nadim","raj","dorjoy","akib","sakib"];
+// var bigFriend = megaFriend(friends);
+// console.log(bigFriend);
