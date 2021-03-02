@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h2>My List</h2>
+        <ul id="myList">
+            <li  id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Necessitatibus, eveniet sunt!</li>
+            <li class="item">Modi, totam consequuntur.</li>
+            <li class="item">Eveniet, excepturi placeat.</li>
+            <li class="item">Non, cumque deserunt.</li>
+        </ul>
+
+        <button id="addNew">Add New Item</button>
+        
+    </div>
+    <script>
+        document.getElementById('addNew').addEventListener('click', function(event){
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = 'Brand New Item';
+            itemParent.appendChild(newItem);
+        })
+        document.getElementById('myList').addEventListener('click',function(){
+            event.target.parentNode.removeChild(event.target);
+        })
+    </script>
+</body>
+</html>

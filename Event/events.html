@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="handleClick()">Exploring Events</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab maiores </p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <button onmousemove="handleClick()">Click me 0</button>
+    <button onmouseout="handleClick()">Click me 1</button>
+    
+    <button id="second">Click me 2</button>
+    <button id="lastPerson">Click me 3</button>
+    <script>
+        document.getElementById('lastPerson').addEventListener('click',function(){
+            document.body.style.color = ' blue';
+        })
+        function handleClick(){
+            //console.log('Someone Click me');
+            document.body.style.backgroundColor = 'red';
+        }
+        // const secondButton = document.getElementById('second');
+        // // secondButton.onclick = handleClick;
+        // secondButton.addEventListener('click', handleClick);
+    </script>
+</body>
+</html>

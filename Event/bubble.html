@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h2>My List</h2>
+        <ul id="myList">
+            <li  id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Necessitatibus, eveniet sunt!</li>
+            <li class="item">Modi, totam consequuntur.</li>
+            <li class="item">Eveniet, excepturi placeat.</li>
+            <li class="item">Non, cumque deserunt.</li>
+        </ul>
+        <button id="addNew">Add New Item</button>
+    </div>
+    <script>
+        // document.getElementById('first').addEventListener('click',function(){
+        //     console.log('first item clicked');
+        //     // event.stopPropagation();
+        // })
+        // document.getElementById('myList').addEventListener('click',function(){
+        //     console.log('UL clicked');
+        //     event.stopPropagation();
+        // })
+
+        // document.getElementById('container').addEventListener('click',function(){
+        //     console.log('container clicked');
+        // })
+
+        var items = document.getElementsByClassName('item');
+        for(let i=0;i<items.length;i++){
+            var item = items[i];
+            item.addEventListener('click', function(event){
+                //console.log(event.target.innerText);
+                //console.log(event.target.parentNode);
+                event.target.parentNode.removeChild(event.target);
+            }) 
+        }
+        document.getElementById('addNew').addEventListener('click', function(event){
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = 'Brand New Item';
+            itemParent.appendChild(newItem);
+        })
+    </script>
+</body>
+</html>
